@@ -1,0 +1,38 @@
+---
+title: "Minha cliente tentou agendar novamente — o que acontece?"
+description: "Entenda o modal de aviso que aparece quando uma cliente já tem agendamentos futuros."
+date: "2026-06-07"
+tags: ["agendamento-online", "cpf", "reagendamento"]
+---
+
+### O que você vai aprender
+
+O que acontece quando uma cliente que já tem um agendamento futuro tenta marcar outro horário pelo link público.
+
+### Antes de começar
+
+Nenhum pré-requisito. Esse comportamento é automático e depende apenas do preenchimento do CPF no wizard.
+
+### Passo a passo
+
+1. A cliente preenche o CPF durante o agendamento online.
+2. O sistema consulta automaticamente se existem agendamentos futuros vinculados àquele CPF.
+3. Se encontrar, exibe um modal: *"Você já possui X agendamento(s). O que deseja fazer?"*
+4. A cliente escolhe uma das opções:
+
+| Opção | O que acontece |
+|---|---|
+| **Reagendar** | Ela seleciona um agendamento existente. O antigo é cancelado automaticamente com o motivo "Cliente reagendou via wizard online" e o novo é criado. |
+| **Fazer outro** | O sistema ignora os agendamentos existentes e cria um novo normalmente. |
+| **Cancelar** | O modal fecha e ela volta para o formulário. |
+
+### Resultado esperado
+
+Dependendo da escolha, a cliente termina com um agendamento reagendado ou com um agendamento adicional — nunca com um conflito não tratado.
+
+**Ponto de atenção:** o CPF é obrigatório para essa detecção funcionar. Sem CPF, o sistema não consegue identificar a cliente.
+
+### Dúvidas relacionadas
+
+- [Como funciona o agendamento online pela cliente (PIX)](/agendamento/agendamento-online-pix)
+- [Como a cliente pode consultar seus agendamentos](/agendamento/cliente-consultar-agendamentos)

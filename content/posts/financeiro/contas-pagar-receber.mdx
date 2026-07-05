@@ -1,0 +1,41 @@
+---
+title: "Como registrar uma despesa ou receita avulsa (Contas)"
+description: "Registre aluguel, produtos, mensalidades e outros compromissos que não vêm de agendamentos."
+date: "2026-06-11"
+tags: ["financeiro", "contas", "parcelamento"]
+---
+
+### O que você vai aprender
+
+Como cadastrar uma conta a pagar ou a receber, com ou sem parcelamento.
+
+### Antes de começar
+
+Você precisa ser **Admin**.
+
+### Passo a passo
+
+1. Acesse **Financeiro → Contas → Nova conta**.
+2. Escolha o **tipo**: A receber (receita) ou A pagar (despesa).
+3. Informe o **valor total** — o sistema divide automaticamente pelo número de parcelas.
+4. Informe o **número de parcelas** (use 1 para pagamento único).
+5. Defina a data do **primeiro vencimento**.
+6. Ajuste o **intervalo entre parcelas**, se necessário (padrão: 30 dias).
+7. Preencha a categoria, para facilitar a organização nos relatórios.
+8. Salve.
+
+### Resultado esperado
+
+O sistema cria um lançamento para cada parcela, e calcula o status da conta automaticamente:
+
+| Status | Quando aparece |
+|---|---|
+| Quitada | Todas as parcelas pagas |
+| Parcialmente paga | Ao menos uma parcela paga |
+| Pendente | Nenhuma parcela paga |
+| Cancelada | Todas as parcelas canceladas |
+
+### Dúvidas relacionadas
+
+- [Entendendo os lançamentos financeiros](/financeiro/lancamentos-financeiros)
+- [Como gerenciar contas bancárias e wallets](/financeiro/contas-bancarias)

@@ -1,0 +1,37 @@
+---
+title: "Como configurar os horários de trabalho (Blocos de trabalho)"
+description: "Defina em quais dias e horários cada profissional está disponível para agendamento."
+date: "2026-06-03"
+tags: ["horarios", "agenda", "primeiros-passos"]
+---
+
+### O que você vai aprender
+
+Como configurar os blocos de trabalho de um profissional, que definem quando ele está disponível para receber agendamentos.
+
+### Antes de começar
+
+Você precisa ter o perfil **Admin** e o profissional já deve estar cadastrado.
+
+### Passo a passo
+
+1. Acesse **Gestão de Equipe → Horários** e selecione o profissional.
+2. Crie um bloco escolhendo o **dia da semana** — o bloco se repete toda semana.
+3. Defina **hora início** e **hora fim**, por exemplo `08:00` às `12:00`.
+4. Se esse horário deve aparecer primeiro para a cliente, marque como **Preferencial**.
+5. Repita o processo para criar mais blocos no mesmo dia (ex: manhã e tarde) ou em outros dias.
+6. Salve.
+
+### Resultado esperado
+
+O sistema passa a gerar horários disponíveis automaticamente com base nos blocos:
+
+1. Identifica os blocos configurados para o dia selecionado.
+2. Dentro de cada bloco, cria intervalos com passo igual à duração do serviço somada ao buffer do profissional.
+3. Remove horários já ocupados e horários no passado.
+4. Exibe os horários preferenciais primeiro, depois os demais.
+
+### Dúvidas relacionadas
+
+- [Como definir os serviços do seu studio](/primeiros-passos/como-definir-servicos)
+- [Como criar um agendamento manual pelo painel](/agendamento/agendamento-manual)

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink dark:bg-paper-dark dark:text-ink-dark transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-moss-300/60;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-moss-500 ring-offset-2 ring-offset-paper dark:ring-offset-paper-dark;
+  }
+}
+
+@layer components {
+  /* Etiqueta estilo "carimbo de catálogo" — o elemento assinatura do design */
+  .stamp-tag {
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-brass/50 bg-brass/10 px-2.5 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-brass-dark dark:text-brass-light dark:border-brass/40 dark:bg-brass/10;
+  }
+}
