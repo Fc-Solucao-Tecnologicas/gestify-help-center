@@ -31,18 +31,18 @@ export function SearchBox({ posts }: { posts: PostMeta[] }) {
       <div className="relative">
         <Search
           size={18}
-          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink/40 dark:text-ink-dark/40"
+          className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-zinc-600"
         />
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Buscar por palavra-chave, categoria ou tag…"
-          className="w-full rounded-card border border-ink/15 bg-surface py-3.5 pl-11 pr-4 text-ink placeholder:text-ink/40 focus:border-moss-500 dark:border-ink-dark/15 dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-dark/40"
+          placeholder="Buscar por palavra-chave, categoria ou tag..."
+          className="w-full rounded-xl border border-white/10 bg-card py-3.5 pl-11 pr-4 text-sm text-zinc-200 outline-none transition-colors focus:border-accent/40 placeholder:text-zinc-600"
         />
       </div>
 
-      <p className="mt-3 font-mono text-xs uppercase tracking-wider text-ink/40 dark:text-ink-dark/40">
+      <p className="mt-3 text-[11px] font-semibold uppercase tracking-wider text-zinc-600">
         {results.length}{" "}
         {results.length === 1 ? "artigo encontrado" : "artigos encontrados"}
       </p>

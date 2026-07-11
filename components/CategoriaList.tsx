@@ -11,12 +11,10 @@ export function CategoriaList({ categorias }: { categorias: Categoria[] }) {
         <Link
           key={categoria.slug}
           href={`/${categoria.slug}`}
-          className="stamp-tag transition-colors hover:bg-brass/20"
+          className="tag transition-colors hover:bg-accent/[0.14]"
         >
           {categoria.label}
-          <span className="text-brass-dark/60 dark:text-brass-light/60">
-            {categoria.count}
-          </span>
+          <span className="text-accent/60">{categoria.count}</span>
         </Link>
       ))}
     </div>

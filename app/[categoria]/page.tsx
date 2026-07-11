@@ -34,17 +34,20 @@ export default function CategoriaPage({
   if (posts.length === 0) notFound();
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
+    <div className="mx-auto max-w-5xl px-6 pb-20 pt-28">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-ink/50 hover:text-moss-600 dark:text-ink-dark/50 dark:hover:text-moss-300"
+        className="mb-8 inline-flex items-center gap-1.5 text-[13px] font-medium text-zinc-400 transition-colors hover:text-zinc-200"
       >
-        <ArrowLeft size={14} />
+        <ArrowLeft size={13} />
         Voltar para o início
       </Link>
 
-      <span className="stamp-tag mb-4">{label}</span>
-      <h1 className="mb-8 font-display text-3xl font-semibold text-ink dark:text-ink-dark">
+      <span className="tag mb-4">{label}</span>
+      <h1
+        className="mb-10 text-[30px] font-extrabold tracking-tight text-zinc-100"
+        style={{ letterSpacing: "-0.03em" }}
+      >
         Artigos sobre {label.toLowerCase()}
       </h1>
 

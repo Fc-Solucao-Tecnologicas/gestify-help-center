@@ -14,24 +14,23 @@ export function PostCard({ post }: { post: PostMeta }) {
   return (
     <Link
       href={`/${post.categoriaSlug}/${post.slug}`}
-      className="group block rounded-card border border-ink/10 bg-surface p-5 shadow-card transition-all hover:-translate-y-0.5 hover:border-moss-500/50 dark:border-ink-dark/10 dark:bg-surface-dark"
+      className="card group block p-5 transition-all hover:-translate-y-0.5 hover:border-accent/30"
     >
       <div className="mb-3 flex items-center justify-between gap-3">
-        <span className="stamp-tag">{post.categoria}</span>
-        <time
-          dateTime={post.date}
-          className="font-mono text-xs text-ink/40 dark:text-ink-dark/40"
-        >
+        <span className="tag text-[10px]">
+          {post.categoria}
+        </span>
+        <time dateTime={post.date} className="text-[11px] text-zinc-600">
           {formatDate(post.date)}
         </time>
       </div>
 
-      <h3 className="font-display text-lg font-semibold leading-snug text-ink group-hover:text-moss-600 dark:text-ink-dark dark:group-hover:text-moss-300">
+      <h3 className="text-[15px] font-semibold leading-snug text-zinc-200 transition-colors group-hover:text-accent">
         {post.title}
       </h3>
 
       {post.description && (
-        <p className="mt-2 text-sm text-ink/60 dark:text-ink-dark/60">
+        <p className="mt-2 text-[13px] leading-relaxed text-zinc-600">
           {post.description}
         </p>
       )}

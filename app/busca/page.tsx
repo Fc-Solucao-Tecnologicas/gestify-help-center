@@ -9,8 +9,11 @@ export default function BuscaPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="mb-6 font-display text-3xl font-semibold text-ink dark:text-ink-dark">
+    <div className="mx-auto max-w-5xl px-6 pb-20 pt-28">
+      <h1
+        className="mb-8 text-[30px] font-extrabold tracking-tight text-zinc-100"
+        style={{ letterSpacing: "-0.03em" }}
+      >
         Buscar artigos
       </h1>
       <SearchBox posts={posts} />

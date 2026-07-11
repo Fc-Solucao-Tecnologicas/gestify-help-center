@@ -42,50 +42,47 @@ export default function PostPage({
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-2xl px-6 py-16">
+    <article className="mx-auto max-w-2xl px-6 pb-20 pt-28">
       <Link
         href="/"
-        className="mb-8 inline-flex items-center gap-2 text-sm text-ink/50 hover:text-moss-600 dark:text-ink-dark/50 dark:hover:text-moss-300"
+        className="mb-8 inline-flex items-center gap-1.5 text-[13px] font-medium text-zinc-400 transition-colors hover:text-zinc-200"
       >
-        <ArrowLeft size={14} />
+        <ArrowLeft size={13} />
         Voltar para o início
       </Link>
 
       <div className="mb-4 flex items-center gap-3">
-        <Link
-          href={`/${post.categoriaSlug}`}
-          className="stamp-tag hover:bg-brass/20"
-        >
+        <Link href={`/${post.categoriaSlug}`} className="tag hover:bg-accent/20 transition-colors">
           {post.categoria}
         </Link>
         {post.date && (
-          <time
-            dateTime={post.date}
-            className="font-mono text-xs text-ink/40 dark:text-ink-dark/40"
-          >
+          <time dateTime={post.date} className="text-[11px] text-zinc-600">
             {formatDate(post.date)}
           </time>
         )}
       </div>
 
-      <h1 className="font-display text-3xl font-semibold leading-tight text-ink dark:text-ink-dark sm:text-4xl">
+      <h1
+        className="text-[30px] font-extrabold leading-tight tracking-tight text-zinc-100 sm:text-[34px]"
+        style={{ letterSpacing: "-0.03em" }}
+      >
         {post.title}
       </h1>
 
       {post.description && (
-        <p className="mt-4 text-lg text-ink/60 dark:text-ink-dark/60">
+        <p className="mt-4 text-[15px] leading-relaxed text-zinc-600">
           {post.description}
         </p>
       )}
 
-      <div className="prose prose-lg mt-10 max-w-none dark:prose-invert">
+      <div className="prose prose-lg mt-10 max-w-none">
         <MDXRemote source={post.content} />
       </div>
 
       {post.tags.length > 0 && (
-        <div className="mt-12 flex flex-wrap gap-2 border-t border-ink/10 pt-6 dark:border-ink-dark/10">
+        <div className="mt-12 flex flex-wrap gap-2 border-t border-white/5 pt-6">
           {post.tags.map((tag) => (
-            <span key={tag} className="stamp-tag">
+            <span key={tag} className="tag">
               #{tag}
             </span>
           ))}

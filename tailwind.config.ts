@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx,mdx}",
     "./components/**/*.{ts,tsx}",
@@ -10,52 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: {
-          DEFAULT: "#EFF1EC",
-          dark: "#12140F",
-        },
-        ink: {
-          DEFAULT: "#1F2A24",
-          dark: "#E7EAE3",
-        },
-        moss: {
-          50: "#EAF3EC",
-          100: "#CFE4D5",
-          300: "#7FB794",
-          500: "#2F6F4E",
-          600: "#255B3F",
-          700: "#1C4630",
-        },
-        brass: {
-          DEFAULT: "#C9A227",
-          light: "#E4C766",
-          dark: "#8F721B",
-        },
-        surface: {
-          DEFAULT: "#FFFFFF",
-          dark: "#1B1F18",
+        body: "#060a06",
+        card: "#0c130d",
+        accent: {
+          DEFAULT: "#4ade80",
+          solid: "#22c55e",
+          hover: "#16a34a",
         },
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "serif"],
-        body: ["var(--font-inter)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        card: "0.375rem",
-      },
-      boxShadow: {
-        card: "0 1px 2px 0 rgb(31 42 36 / 0.06), 0 1px 3px 0 rgb(31 42 36 / 0.08)",
+        card: "0.75rem",
       },
       typography: () => ({
         DEFAULT: {
           css: {
-            "--tw-prose-body": "#1F2A24",
-            "--tw-prose-headings": "#1F2A24",
-            "--tw-prose-links": "#2F6F4E",
-            "--tw-prose-bold": "#1F2A24",
-            "--tw-prose-quotes": "#255B3F",
-            "--tw-prose-code": "#255B3F",
+            "--tw-prose-body": "#52525b",
+            "--tw-prose-headings": "#e4e4e7",
+            "--tw-prose-links": "#4ade80",
+            "--tw-prose-bold": "#e4e4e7",
+            "--tw-prose-quotes": "#4ade80",
+            "--tw-prose-code": "#4ade80",
+            "--tw-prose-pre-bg": "rgba(255,255,255,0.04)",
+            "--tw-prose-pre-code": "#e4e4e7",
+            "--tw-prose-th-borders": "rgba(255,255,255,0.08)",
+            "--tw-prose-td-borders": "rgba(255,255,255,0.08)",
             maxWidth: "none",
           },
         },
