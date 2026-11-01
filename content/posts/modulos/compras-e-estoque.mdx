@@ -1,0 +1,61 @@
+---
+title: "Como controlar compras e estoque"
+description: "Cadastre fornecedores e produtos, lance compras (inclusive pelo XML da nota) e acompanhe o saldo do estoque."
+date: "2026-10-31"
+tags: ["compras", "estoque", "produtos", "fornecedores", "modulos"]
+---
+
+### O que você vai aprender
+
+Como usar o módulo de Compras para registrar o que o studio compra, dar entrada no estoque e gerar as contas a pagar — sem planilha.
+
+### Antes de começar
+
+- O módulo **Produtos / Estoque / Compras** precisa estar ativo no seu studio — veja [O que são os módulos do Gestify](/modulos/modulos-do-gestify).
+- Tudo fica no item **Compras** do menu lateral, organizado em cartões: **Fornecedores**, **Compras**, **Produtos**, **Consulta de Estoque** e **Movimentação de Estoque**.
+
+### Passo a passo
+
+**1. Cadastre os fornecedores**
+
+1. Em **Compras → Fornecedores**, clique em **Novo Fornecedor**.
+2. Informe o CNPJ e busque: o Gestify preenche os dados da Receita Federal automaticamente. Confira antes de salvar. Também é possível cadastrar com CPF ou preencher manualmente.
+
+Dica: se você importar uma nota fiscal (passo 3), o fornecedor é criado automaticamente a partir do XML.
+
+**2. Cadastre os produtos**
+
+Em **Compras → Produtos**, clique em **Novo Produto**. O catálogo aceita produtos de revenda, insumos, itens de consumo e ativos imobilizados.
+
+**3. Lance uma compra**
+
+Em **Compras → Compras**, escolha uma das opções:
+
+- **Importar XML** — envie o arquivo XML da NFe (até 10 MB) e escolha o **Depósito de destino**.
+- **Nova Compra** — lançamento manual: escolha o fornecedor e o depósito, adicione os produtos com quantidade e valor.
+
+A compra entra na aba **Importadas**.
+
+**4. Confira e efetive**
+
+1. Abra a compra e clique em **Iniciar Conferência** — ela vai para a aba **Em Conferência**.
+2. Confira os itens: vincule cada item da nota a um produto do seu catálogo (ou crie um produto novo a partir do item) e ajuste a unidade de compra e o **fator de conversão** — por exemplo, 1 caixa = 12 unidades. Clique em **Salvar itens**.
+3. Confira as **Parcelas** (valor e vencimento) — use **+ Adicionar parcela** se precisar.
+4. Clique em **Efetivar**. O botão só libera quando todos os itens estão vinculados a um produto.
+
+### Resultado esperado
+
+- A compra vai para a aba **Efetivadas**.
+- O estoque recebe a entrada dos produtos no depósito escolhido.
+- As parcelas viram contas a pagar no **Financeiro**.
+- Em **Consulta de Estoque** você vê o saldo atual de cada produto ("—" = nunca teve movimentação; "0" = zerou).
+
+**Ponto de atenção:** nada muda no estoque nem no financeiro enquanto a compra não é efetivada. Se precisar corrigir uma compra efetivada, use **Reverter p/ Conferência** — isso não é possível se alguma parcela já foi paga.
+
+**Ajustes e transferências:** em **Movimentação de Estoque** você registra abastecimentos avulsos, ajustes (valor negativo para perda ou quebra, positivo para corrigir uma contagem) e transferências entre depósitos. O histórico nunca é editado — toda correção gera uma nova linha.
+
+### Dúvidas relacionadas
+
+- [O que são os módulos do Gestify e como usar](/modulos/modulos-do-gestify)
+- [Como registrar uma despesa ou receita avulsa (Contas)](/financeiro/contas-pagar-receber)
+- [Entendendo os lançamentos financeiros](/financeiro/lancamentos-financeiros)

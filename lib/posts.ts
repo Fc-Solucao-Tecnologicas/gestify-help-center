@@ -13,6 +13,7 @@ export const CATEGORIA_LABELS: Record<string, string> = {
   equipe: "Equipe e Acesso",
   painel: "Painel e Relatórios",
   integracoes: "Integrações",
+  modulos: "Módulos",
 };
 
 export type PostMeta = {
